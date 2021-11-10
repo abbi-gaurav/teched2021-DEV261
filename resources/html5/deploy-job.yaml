@@ -15,7 +15,7 @@ spec:
     spec:
       restartPolicy: OnFailure
       containers:
-        - image: {your-docker-account}/orders-html5-deployer:latest
+        - image: gabbi/orders-html5-deployer:latest
           imagePullPolicy: Always
           name: orders-html5-deployer
           volumeMounts:

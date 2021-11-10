@@ -15,7 +15,7 @@ spec:
     spec:
       restartPolicy: OnFailure
       containers:
-        - image: {your-docker-account}/orders-db-deployer:latest
+        - image: gabbi/orders-db-deployer:latest
           imagePullPolicy: Always
           name: cap-db-deployer
           envFrom:
