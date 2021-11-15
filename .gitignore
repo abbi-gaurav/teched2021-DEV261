@@ -136,6 +136,6 @@ mta_archives/
 vcap.json
 
 credentials/*
-
+credentials-eu2-dev261/*
 tutorial-kubeconfig.yaml
 
