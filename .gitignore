@@ -137,5 +137,6 @@ vcap.json
 
 credentials/*
 credentials-eu2-dev261/*
+credentials-btp-trial/*
 tutorial-kubeconfig.yaml
 
