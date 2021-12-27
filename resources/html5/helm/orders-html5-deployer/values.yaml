@@ -5,7 +5,7 @@
 replicaCount: 1
 
 image:
-  repository: {your-docker-account}/orders-html5-deployer
+  repository: gabbi/orders-html5-deployer
   pullPolicy: Always
   # Overrides the image tag whose default is the chart appVersion.
   tag: "latest"
