@@ -32,7 +32,7 @@ In order to trigger the deployment via the SAP CICD service execute the followin
 - Save the changes
 - Commit and push the changes to your GitHub repository
 
-The push to your GitHub repository will trigger the SAP CICD service to start working on the pipeline. 
+The push to your GitHub repository will trigger the SAP CICD service to start working on the pipeline.
 
 ## Exercise 7.2 - DEPLOYMENT OPTION 2 - kubectl
 
@@ -51,7 +51,7 @@ In order to trigger the deployment via kubectl execute the following steps:
 - Apply the **deployment.yaml** file via kubectl. This generates the _deployment_, the _service_ and the _API Rule_ in one go.
 
   ```shell
-  kubectl -n cap apply -f ./resources/service/deployment.yaml
+  kubectl -n ${NS} apply -f ./resources/service/deployment.yaml
   ```
 
 ## Exercise 7.3 - DEPLOYMENT OPTION 3 - Helm
@@ -63,7 +63,7 @@ In order to trigger the deployment via [Helm](https://helm.sh/) execute the foll
 - Install the Helm chart via
 
   ```shell
-  helm install cap-orders-service ./resources/db/helm/cap-orders-service -n cap
+  helm install cap-orders-service ./resources/db/helm/cap-orders-service -n ${NS}
   ```
 
 ## Result

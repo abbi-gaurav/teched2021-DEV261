@@ -10,7 +10,7 @@ In the step we will deploy the static HTML5 application to the **HTML5 Applicati
 
 We will also deploy the BACKEND_DESTINATION to the service. This requires a few service instances to be generated which are defined within the file **service-instances.yaml**.
 
-> ⚠ NOTE: The BACKEND_DESTINATION, **cap-orders-kyma-srv,** is configured to be defined as a subaccount destination and can be found within the subaccount under **Connectivity -> Destinations**. If any errors were made doing the deployment the destination can be modified directly. The property **SUBACCOUNT_LEVEL_DESTINATION** found within the **deploy-job.yaml** can be set to false to create instance destinations. The definition of the **BACKEND_DESTINATION** was configured in an earlier step and saved as **credentials/html5-config-secret.yaml**
+> ⚠ NOTE: The BACKEND_DESTINATION, **cap-orders-kyma-srv,** is configured to be defined as a subaccount destination and can be found within the subaccount under **Connectivity -> Destinations**. If any errors were made doing the deployment the destination can be modified directly. The property **SUBACCOUNT_LEVEL_DESTINATION** found within the **deploy-job.yaml** can be set to false to create instance destinations. The definition of the **BACKEND_DESTINATION** was configured in an earlier step and saved as**credentials/html5-config-secret.yaml**
 
 To do the deployment execute the following steps:
 
@@ -19,7 +19,7 @@ To do the deployment execute the following steps:
 - Create the service instances for the Destination and the HTML5 Application Repository services
 
   ```shell
-  kubectl -n cap apply -f ./resources/html5/service-instances.yaml
+  kubectl -n ${NS} apply -f ./resources/html5/service-instances.yaml
   ```
 
 ## Exercise 6.1 - DEPLOYMENT OPTION 1 - CICD Service
@@ -41,7 +41,7 @@ To do the deployment execute the following steps:
 - Apply the job
 
   ```shell
-  kubectl -n cap replace --force -f ./resources/html5/deploy-job.yaml
+  kubectl -n ${NS} replace --force -f ./resources/html5/deploy-job.yaml
   ```
 
 ## Exercise 6.3 - DEPLOYMENT OPTION 3 - Helm
@@ -59,7 +59,7 @@ To do the deployment execute the following steps:
 - Install the Helm chart
 
   ```shell
-  helm install orders-html5-deployer ./resources/db/helm/orders-html5-deployer -n cap
+  helm install orders-html5-deployer ./resources/db/helm/orders-html5-deployer -n ${NS}
   ```
 
 ## Verify
@@ -67,12 +67,12 @@ To do the deployment execute the following steps:
 You can check the status and logs of the Kubernetes Job
 
 ```shell
-kubectl -n cap get job orders-html5-deployer
+kubectl -n ${NS} get job orders-html5-deployer
 ```
 
 The results should be similar to below:
 
-```
+```shell
 NAME                    COMPLETIONS   DURATION   AGE
 orders-html5-deployer   1/1           14s        101m
 ```
@@ -80,7 +80,7 @@ orders-html5-deployer   1/1           14s        101m
 To check the logs, run
 
 ```shell
-kubectl -n cap logs job/orders-html5-deployer
+kubectl -n ${NS} logs job/orders-html5-deployer
 ```
 
 ## Summary

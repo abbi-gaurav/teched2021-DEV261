@@ -82,7 +82,8 @@ Next set the kubeconfig to an environment variable:
 Afterwards, ensure that it's working by creating the required namespace in Kyma via:
 
 ```shell
-kubectl create ns cap
+export NS=<provide-unique-namespace-name> #e.g. dkom-gaurav
+kubectl create ns ${NS}
 ```
 
 ## Launchpad service

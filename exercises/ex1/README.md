@@ -11,14 +11,14 @@ After completing these steps you will have created the "Authorization and Trust 
 Apply the resource to create the service instance and binding for the XSUAA instance. This will generate an XSUAA instance that is used to perform a token exchange which the CAP application requires to authenticate/authorize the user:
 
 ```shell
-kubectl -n cap apply -f ./resources/html5/xsuaa-service.yaml
+kubectl -n ${NS} apply -f ./resources/html5/xsuaa-service.yaml
 ```
 
-Inside the Kyma console, open the namespace `cap`.
+Inside the Kyma console, open your namespace.
 
-Now open the service instance `cap-orders-xsuaa-instance` found under `Service Management` -> `Instances`.
+Expand `Configuration` menu tree item and navigate to `Secrets`.
 
-Choose the tab `Credentials` and choose the Secret `cap-orders-xsuaa-binding`.
+Choose the Secret `cap-orders-xsuaa-binding`.
 
 Choose the option `Decode` as these decoded values will need to be copied in the next steps.
 
@@ -42,7 +42,7 @@ Replace the value of `cluster domain` with the Kyma cluster domain url.
 Now it's time to apply the secret to the cluster.
 
 ```shell
-kubectl -n cap apply -f ./credentials/html5-config-secret.yaml
+kubectl -n ${NS} apply -f ./credentials/html5-config-secret.yaml
 ```
 
 ## Exercise 1.3 - Create the VCAP Service
@@ -50,7 +50,7 @@ kubectl -n cap apply -f ./credentials/html5-config-secret.yaml
 Open the file `./credentials/vcap_services.json` and replace the value `<service key>` with the Credentials value for the xsuaa property. This can be done manually or much easier using [jq](https://stedolan.github.io/jq/download/). To export the entire decoded secret using `jq` run:
 
 ```shell
-kubectl get secret cap-orders-xsuaa-binding -n cap -o json | jq '.data | map_values(@base64d)'
+kubectl -n ${NS} get secret cap-orders-xsuaa-binding -o json | jq '.data | map_values(@base64d)'
 ```
 
 The result looks like this:
@@ -134,7 +134,7 @@ Create a secret in Kyma containing the contents of this file executing the follo
 * If using a bash shell:
   
   ```shell
-  kubectl -n cap create secret generic orders-vcap-services --from-literal "VCAP_SERVICES=$(<credentials/vcap_services.json)"
+  kubectl -n ${NS} create secret generic orders-vcap-services --from-literal "VCAP_SERVICES=$(<credentials/vcap_services.json)"
   ```
   
 * If using PowerShell first convert the file into base64 by running:
@@ -146,7 +146,7 @@ Create a secret in Kyma containing the contents of this file executing the follo
   Then within the project open the file `templates/orders-vcap-services.yaml` and create a copy of it saving it into the `credentials` directory of the project. Replace the contents of the `<base64 encoded vcap_services>` with the result of the previous command and apply the file.
 
   ```shell
-  kubectl -n cap apply -f ./credentials/orders-vcap-services.yaml
+  kubectl -n ${NS} apply -f ./credentials/orders-vcap-services.yaml
   ```
 
 ## Exercise 1.4 - Add User to Role Templage

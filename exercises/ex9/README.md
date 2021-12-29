@@ -53,7 +53,7 @@ You can also see that the required scope is defined as `submitexternal order`.
 Apply this change via:
 
 ```shell
-kubectl -n cap apply -f ./resources/service/apirule-external.yaml
+kubectl -n ${NS} apply -f ./resources/service/apirule-external.yaml
 ```
 
 Let us validate that the change is effective by issuing a POST request to the endpoint:

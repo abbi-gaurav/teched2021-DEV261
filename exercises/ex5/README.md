@@ -40,7 +40,7 @@ To push the Docker files we will create in the next steps to the right registry 
 - Apply the deploy job
 
   ```shell
-  kubectl -n cap replace --force -f ./resources/db/deploy-job.yaml
+  kubectl -n ${NS} replace --force -f ./resources/db/deploy-job.yaml
   ```
 
 ## Exercise 5.3 - DEPLOYMENT OPTION 3 - Helm
@@ -58,7 +58,7 @@ To push the Docker files we will create in the next steps to the right registry 
 - Install the Helm chart
 
   ```shell
-  helm install orders-db-deployer ./resources/db/helm/orders-db-deployer -n cap
+  helm install orders-db-deployer ./resources/db/helm/orders-db-deployer -n ${NS}
   ```
 
 ## Verify
@@ -66,12 +66,12 @@ To push the Docker files we will create in the next steps to the right registry 
 You can check the status and logs of the Kubernetes Job
 
 ```shell
-kubectl -n cap get job orders-db-deployer
+kubectl -n ${NS} get job orders-db-deployer
 ```
 
 The results should be similar to below:
 
-```
+```shell
 NAME                 COMPLETIONS   DURATION   AGE
 orders-db-deployer   1/1           23s        99m
 ```
@@ -79,7 +79,7 @@ orders-db-deployer   1/1           23s        99m
 To check the logs, run
 
 ```shell
-kubectl -n cap logs job/orders-db-deployer
+kubectl -n ${NS} logs job/orders-db-deployer
 ```
 
 ## Summary

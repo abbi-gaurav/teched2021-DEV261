@@ -11,16 +11,15 @@ In the file **srv/orders-service.js** you find the definition of a CDS Action ca
 To deploy the Kyma function apply the **order-mock** function deployment
 
 ```shell
-kubectl -n cap apply -f ./resources/functionmock/deployment.yaml
+kubectl -n ${NS} apply -f ./resources/functionmock/deployment.yaml
 ```
-
 
 ## Local Call of the Mock Application
 
 To be able to test locally apply the **order-mock** API rule deployment via:
 
 ```shell
-kubectl -n cap apply -f ./resources/functionmock/apirule.yaml
+kubectl -n ${NS} apply -f ./resources/functionmock/apirule.yaml
 ```
 
 Now call the mock function using:
@@ -61,7 +60,7 @@ If you get the message "no healthy upstream", try again after a minute.
 After testing delete the API rule via:
 
 ```shell
-kubectl -n cap delete -f ./resources/functionmock/apirule.yaml
+kubectl -n ${NS} delete -f ./resources/functionmock/apirule.yaml
 ```
 
 ## Call via SUBMITORDER Action

@@ -27,7 +27,7 @@ The file **resources/alertnotif/deployment.yaml** will be applied after a few mo
 - Apply the resources to your Kyma cluster
 
   ```shell
-  kubectl -n cap apply -f ./resources/alertnotif/deployment.yaml
+  kubectl -n ${NS} apply -f ./resources/alertnotif/deployment.yaml
   ```
 
 - Once applied you should receive an automated email from **SAP Alert Notification service** asking you to confirm the subscription to the action.
@@ -40,7 +40,7 @@ The file **resources/alertnotif/deployment.yaml** will be applied after a few mo
 - Apply the changes to your Kyma cluster
 
   ```shell
-  kubectl -n cap apply -f ./resources/service/deployment_w_cm.yaml
+  kubectl -n ${NS} apply -f ./resources/service/deployment_w_cm.yaml
   ```
 
 Using the **access_token** obtained in the previous exercise call the **external/submitorder** endpoint again

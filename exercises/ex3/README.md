@@ -90,6 +90,7 @@ This step details the process of adding the GitHub repository container the code
 - Leave the rest of the values with their defaults and choose **Add**
 
 After the creation
+
 - Choose **Webhook Data** at the top of the just-created entry
 - There will be a link called `dev261` on the dialog which will navigate to **Settings -> Hooks** of the desigated repo
 - Choose **Add webhook**
