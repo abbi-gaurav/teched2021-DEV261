@@ -1,7 +1,7 @@
 {
     "_version": "1.32.0",
     "sap.app": {
-        "id": "com.cap.kyma.orders",
+        "id": "com.cap.kyma.orders.dev261-d066419",
         "type": "application",
         "i18n": "i18n/i18n.properties",
         "title": "{{appTitle}}",

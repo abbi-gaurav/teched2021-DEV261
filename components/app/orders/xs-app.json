@@ -4,7 +4,7 @@
   "routes": [
     {
       "source": "^/orders/(.*)$",
-      "destination": "cap-orders-kyma-srv",
+      "destination": "cap-orders-kyma-srv-dev261-d066419",
       "authenticationType": "xsuaa",
       "csrfProtection": false
     },
