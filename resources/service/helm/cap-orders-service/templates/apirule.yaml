@@ -17,6 +17,6 @@ spec:
         - HEAD
       path: /.*
   service:
-    host: {{ include "cap-orders-service.fullname" . }}
+    host: {{ include "cap-orders-service.fullname" . }}-{{ .Release.Namespace }}
     name: {{ include "cap-orders-service.fullname" . }}
     port: {{ .Values.service.targetPort }}

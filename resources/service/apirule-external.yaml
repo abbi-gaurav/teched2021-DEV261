@@ -36,6 +36,6 @@ spec:
     - HEAD
     path: /
   service:
-    host: cap-orders-service
+    host: cap-orders-service-{your-namespace}
     name: cap-orders-service
     port: 4004
