@@ -145,6 +145,6 @@
     },
     "sap.cloud": {
       "public": true,
-      "service": "cap.orders.kyma.service"
+      "service": "cap.orders.kyma.service.d066419"
     }
 }
