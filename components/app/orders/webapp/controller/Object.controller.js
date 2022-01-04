@@ -8,7 +8,7 @@ sap.ui.define(
   function (BaseController, JSONModel, History, formatter) {
     "use strict";
 
-    return BaseController.extend("com.cap.kyma.orders.controller.Object", {
+    return BaseController.extend("com.cap.kyma.orders.d066419.controller.Object", {
       formatter: formatter,
 
       /* =========================================================== */

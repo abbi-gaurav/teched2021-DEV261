@@ -2,7 +2,7 @@ sap.ui.define(["sap/ui/test/Opa5"], function (Opa5) {
   "use strict";
 
   return Opa5.extend(
-    "com.cap.kyma.orders.test.integration.arrangements.Startup",
+    "com.cap.kyma.orders.d066419.test.integration.arrangements.Startup",
     {
       /**
        * Initializes mock server, then starts the app component
@@ -20,7 +20,7 @@ sap.ui.define(["sap/ui/test/Opa5"], function (Opa5) {
         // start the app UI component
         this.iStartMyUIComponent({
           componentConfig: {
-            name: "com.cap.kyma.orders",
+            name: "com.cap.kyma.orders.d066419",
             async: true,
           },
           hash: oOptions.hash,

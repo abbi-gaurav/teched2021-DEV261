@@ -6,7 +6,7 @@ sap.ui.define(
     // shortcut for sap.m.URLHelper
     var URLHelper = mobileLibrary.URLHelper;
 
-    return Controller.extend("com.cap.kyma.orders.controller.BaseController", {
+    return Controller.extend("com.cap.kyma.orders.d066419.controller.BaseController", {
       /**
        * Convenience method for accessing the router.
        * @public

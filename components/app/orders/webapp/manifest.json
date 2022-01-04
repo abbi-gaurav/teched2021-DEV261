@@ -1,7 +1,7 @@
 {
     "_version": "1.32.0",
     "sap.app": {
-        "id": "com.cap.kyma.orders.dev261-d066419",
+        "id": "com.cap.kyma.orders.d066419",
         "type": "application",
         "i18n": "i18n/i18n.properties",
         "title": "{{appTitle}}",
@@ -54,7 +54,7 @@
     },
     "sap.ui5": {
         "rootView": {
-            "viewName": "com.cap.kyma.orders.view.App",
+            "viewName": "com.cap.kyma.orders.d066419.view.App",
             "type": "XML",
             "async": true,
             "id": "app"
@@ -75,7 +75,7 @@
             "i18n": {
                 "type": "sap.ui.model.resource.ResourceModel",
                 "settings": {
-                    "bundleName": "com.cap.kyma.orders.i18n.i18n"
+                    "bundleName": "com.cap.kyma.orders.d066419.i18n.i18n"
                 }
             },
             "": {
@@ -93,7 +93,7 @@
             "config": {
                 "routerClass": "sap.m.routing.Router",
                 "viewType": "XML",
-                "viewPath": "com.cap.kyma.orders.view",
+                "viewPath": "com.cap.kyma.orders.d066419.view",
                 "controlId": "app",
                 "controlAggregation": "pages",
                 "bypassed": {

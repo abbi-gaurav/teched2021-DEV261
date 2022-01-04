@@ -1,5 +1,5 @@
 sap.ui.define(
-  ["com/cap/kyma/orders/model/models", "sap/ui/Device"],
+  ["com/cap/kyma/orders/d066419/model/models", "sap/ui/Device"],
   function (models, Device) {
     "use strict";
 

@@ -1,5 +1,5 @@
 <mvc:View
-	controllerName="com.cap.kyma.orders.controller.Object"
+	controllerName="com.cap.kyma.orders.d066419.controller.Object"
 	xmlns="sap.m"
 	xmlns:l="sap.ui.layout"
 	xmlns:mvc="sap.ui.core.mvc"

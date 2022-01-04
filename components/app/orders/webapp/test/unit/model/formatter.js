@@ -1,4 +1,4 @@
-sap.ui.define(["com/cap/kyma/orders/model/formatter"], function (formatter) {
+sap.ui.define(["com/cap/kyma/orders/d066419/model/formatter"], function (formatter) {
   "use strict";
 
   QUnit.module("Number unit");

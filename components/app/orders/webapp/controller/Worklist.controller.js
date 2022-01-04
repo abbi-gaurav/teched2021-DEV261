@@ -9,7 +9,7 @@ sap.ui.define(
   function (BaseController, JSONModel, formatter, Filter, FilterOperator) {
     "use strict";
 
-    return BaseController.extend("com.cap.kyma.orders.controller.Worklist", {
+    return BaseController.extend("com.cap.kyma.orders.d066419.controller.Worklist", {
       formatter: formatter,
 
       /* =========================================================== */

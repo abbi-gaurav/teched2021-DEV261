@@ -65,8 +65,8 @@ sap.ui.define(
                   resolutionResult: {
                     applicationType: "SAPUI5",
                     additionalInformation:
-                      "SAPUI5.Component=com.cap.kyma.orders",
-                    url: sap.ui.require.toUrl("com/cap/kyma/orders"),
+                      "SAPUI5.Component=com.cap.kyma.orders.d066419",
+                    url: sap.ui.require.toUrl("com.cap.kyma.orders.d066419"),
                   },
                 },
               },

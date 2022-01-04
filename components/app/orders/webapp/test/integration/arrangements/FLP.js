@@ -45,7 +45,7 @@ sap.ui.define(
       : fnSetupFLPStyles();
 
     return Opa5.extend(
-      "com.cap.kyma.orders.test.integration.arrangements.FLP",
+      "com.cap.kyma.orders.d066419.test.integration.arrangements.FLP",
       {
         /**
          * Navigating to home screen to unload the app component

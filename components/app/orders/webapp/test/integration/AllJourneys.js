@@ -9,7 +9,7 @@ sap.ui.define(
     "use strict";
     Opa5.extendConfig({
       arrangements: new Startup(),
-      viewNamespace: "com.cap.kyma.orders.view.",
+      viewNamespace: "com.cap.kyma.orders.d066419.view.",
     });
   }
 );

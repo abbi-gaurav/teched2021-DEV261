@@ -8,7 +8,7 @@ sap.ui.define(
   function (UIComponent, Device, models, ErrorHandler) {
     "use strict";
 
-    return UIComponent.extend("com.cap.kyma.orders.Component", {
+    return UIComponent.extend("com.cap.kyma.orders.d066419.Component", {
       metadata: {
         manifest: "json",
       },

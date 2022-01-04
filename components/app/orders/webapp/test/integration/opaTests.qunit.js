@@ -6,7 +6,7 @@ sap.ui.getCore().attachInit(function () {
   "use strict";
 
   sap.ui.require(
-    ["com/cap/kyma/orders/test/integration/AllJourneys"],
+    ["com/cap/kyma/orders/d066419/test/integration/AllJourneys"],
     function () {
       QUnit.start();
     }
