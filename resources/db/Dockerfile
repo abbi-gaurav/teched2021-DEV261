@@ -1,5 +1,5 @@
 # Use the capbuilder for the first stage build
-FROM {your-docker-account}/capui5tools as capbuild
+FROM gabbi/capui5tools as capbuild
 # Create app directory, in which the CAP service is built
 WORKDIR /app
 # Set to production mode
